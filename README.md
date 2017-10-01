@@ -1,5 +1,6 @@
-# gossm
+# Serverping for test and learning Go
 Server status monitor written in Go
+Original written by gossm
 
 ## Overview
 
