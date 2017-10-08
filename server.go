@@ -1,4 +1,4 @@
-package gossm
+package serverping
 
 import (
 	"fmt"

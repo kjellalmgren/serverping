@@ -1,14 +1,15 @@
-package gossm
+package serverping
 
 import (
 	"fmt"
 	"os"
 	"time"
 
-	"github.com/ssimunic/gossm/dial"
-	"github.com/ssimunic/gossm/logger"
-	"github.com/ssimunic/gossm/notify"
-	"github.com/ssimunic/gossm/track"
+	"serverping/dial"
+
+	"serverping/logger"
+	"serverping/notify"
+	"serverping/track"
 )
 
 type Monitor struct {

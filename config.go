@@ -1,11 +1,12 @@
-package gossm
+package serverping
 
 import (
 	"encoding/json"
 
-	"github.com/ssimunic/gossm/validate"
+	"serverping/validate"
 )
 
+// Config
 type Config struct {
 	Servers  Servers   `json:"servers"`
 	Settings *Settings `json:"settings"`

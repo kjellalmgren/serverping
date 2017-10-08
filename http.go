@@ -1,4 +1,4 @@
-package gossm
+package serverping
 
 import (
 	"fmt"
@@ -27,6 +27,7 @@ func calculateServerUptime(statusAtTime []*statusAtTime) string {
 	return fmt.Sprintf("%.2f", sum/float64(len(statusAtTime))*100)
 }
 
+/*
 func lastStatus(statusAtTime []*statusAtTime) string {
 	lastChecked := statusAtTime[len(statusAtTime)-1]
 	difference := time.Since(lastChecked.Time)
@@ -36,8 +37,20 @@ func lastStatus(statusAtTime []*statusAtTime) string {
 	}
 	return fmt.Sprintf("%s, %.0f seconds ago", status, difference.Seconds())
 }
+*/
+func lastStatus(statusAtTime []*statusAtTime) string {
+	if len(statusAtTime) == 0 {
+		return "Not yet checked"
+	}
+	lastChecked := statusAtTime[len(statusAtTime)-1]
+	difference := time.Since(lastChecked.Time)
+	status := "OK"
+	if !lastChecked.Status {
+		status = "ERR"
+	}
+	return fmt.Sprintf("%s, %.0f seconds ago", status, difference.Seconds())
+}
 
-// runHTTP - Test
 func RunHttp(address string, monitor *Monitor) {
 	funcMap := template.FuncMap{
 		"calculateServerUptime": calculateServerUptime,

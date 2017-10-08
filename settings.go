@@ -1,14 +1,16 @@
-package gossm
+package serverping
 
 import (
-	"github.com/ssimunic/gossm/notify"
+	"serverping/notify"
 )
 
+// Settings
 type Settings struct {
 	Monitor       *MonitorSettings
 	Notifications *NotificationSettings
 }
 
+// MonitorSettings
 type MonitorSettings struct {
 	CheckInterval             int `json:"checkInterval"`
 	Timeout                   int `json:"timeout"`
@@ -16,11 +18,13 @@ type MonitorSettings struct {
 	ExponentialBackoffSeconds int `json:"exponentialBackoffSeconds"`
 }
 
+// NotificationSettings
 type NotificationSettings struct {
 	Email []*notify.EmailSettings `json:"email"`
 	Sms   []*notify.SmsSettings   `json:"sms"`
 }
 
+// Get Notifiers
 func (n *NotificationSettings) GetNotifiers() (notifiers notify.Notifiers) {
 	for _, email := range n.Email {
 		emailNotifier := &notify.EmailNotifier{Settings: email}
