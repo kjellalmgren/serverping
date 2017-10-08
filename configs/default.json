@@ -3,13 +3,13 @@
         "notifications": {
             "email": [
                 {
-                    "smtp": "smtp.gmail.com",
+                    "smtp": "smtp.tetracon.se",
                     "port": 587,
-                    "username": "silvio.simunic@gmail.com",
+                    "username": "kjell.almgren@tetracon.se",
                     "password": "...",
-                    "from": "silvio.simunic@gmail.com",
+                    "from": "kjell.almgren@tetracon.se",
                     "to": [
-                        "silvio.simunic@gmail.com"
+                        "kjell.almgren@tetracon.se"
                     ]
                 }
             ],
@@ -45,8 +45,8 @@
         },
         {
             "name":"Test server 2",
-            "ipAddress":"162.243.10.151",
-            "port": 8080,
+            "ipAddress":"127.0.01",
+            "port": 9000,
             "protocol": "tcp",
             "checkInterval": 5,
             "timeout": 5
