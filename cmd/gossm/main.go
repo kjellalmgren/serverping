@@ -1,5 +1,9 @@
 package main
 
+/*
+* ./gossm -nolog -config ../../configs/default.json -logfilter tcp -http :1337 .
+ */
+
 import (
 	"flag"
 	"io/ioutil"

@@ -36,18 +36,34 @@
             "timeout": 5
         },
         {
-            "name":"Test server 1",
-            "ipAddress":"162.243.10.151",
+            "name":"Black-pearl64 Manager",
+            "ipAddress":"192.168.1.246",
             "port": 80,
-            "protocol": "tcp",
+            "protocol": "udp",
             "checkInterval": 5,
             "timeout": 5
         },
         {
-            "name":"Test server 2",
-            "ipAddress":"127.0.01",
-            "port": 9000,
-            "protocol": "tcp",
+            "name":"Black-pearl64 worker1",
+            "ipAddress":"192.168.1.22",
+            "port": 80,
+            "protocol": "udp",
+            "checkInterval": 5,
+            "timeout": 5
+        },
+        {
+            "name":"Black-pearl64 worker2",
+            "ipAddress":"192.168.1.129",
+            "protocol": "udp",
+            "port": 80,
+            "checkInterval": 5,
+            "timeout": 5
+        },
+        {
+            "name":"Black-pearl64 worker3",
+            "ipAddress":"192.168.1.42",
+            "port": 80,
+            "protocol": "udp",
             "checkInterval": 5,
             "timeout": 5
         }

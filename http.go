@@ -1,4 +1,4 @@
-package gossm
+package gossm1
 
 import (
 	"fmt"
@@ -37,6 +37,7 @@ func lastStatus(statusAtTime []*statusAtTime) string {
 	return fmt.Sprintf("%s, %.0f seconds ago", status, difference.Seconds())
 }
 
+// runHTTP - Test
 func RunHttp(address string, monitor *Monitor) {
 	funcMap := template.FuncMap{
 		"calculateServerUptime": calculateServerUptime,
@@ -49,7 +50,7 @@ func RunHttp(address string, monitor *Monitor) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>GOSSM - Dashboard</title>
+	<title>Server Ping - Dashboard</title>
 	
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -57,7 +58,7 @@ func RunHttp(address string, monitor *Monitor) {
   <body>
 	<div class="container">
 		<br>
-		<center><h1>Dashboard</h1></center>
+		<center><h1>Server Ping Dashboard</h1></center>
 		<hr>
 		<div class="row">
 			{{ range $server, $statusAtTime := .}}
