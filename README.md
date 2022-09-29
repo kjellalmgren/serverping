@@ -83,7 +83,7 @@ JSON structure is used for configuration. Example can be found in `configs/defau
         },
         {
             "name":"Test server 1",
-            "ipAddress":"162.243.10.151",
+            "ipAddress":"x.x.x.x",
             "port": 80,
             "protocol": "tcp",
             "checkInterval": 5,
@@ -91,7 +91,7 @@ JSON structure is used for configuration. Example can be found in `configs/defau
         },
         {
             "name":"Test server 2",
-            "ipAddress":"162.243.10.151",
+            "ipAddress":"x.x.x.x",
             "port": 8080,
             "protocol": "tcp",
             "checkInterval": 5,
